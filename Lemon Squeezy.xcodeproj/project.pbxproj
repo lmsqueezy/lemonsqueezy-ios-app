@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -80,6 +80,10 @@
 		21DB140E2AD1DE9A00B89E95 /* Webhooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB140D2AD1DE9A00B89E95 /* Webhooks.swift */; };
 		21DB14102AD1DEA200B89E95 /* GetWebhook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB140F2AD1DEA200B89E95 /* GetWebhook.swift */; };
 		21DB14122AD1DEA900B89E95 /* GetWebhooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB14112AD1DEA900B89E95 /* GetWebhooks.swift */; };
+		3670D11D2DC3915D009B8C83 /* LemonSqueezy in Frameworks */ = {isa = PBXBuildFile; productRef = 3670D11C2DC3915D009B8C83 /* LemonSqueezy */; };
+		3670D11F2DC39180009B8C83 /* LemonSqueezy in Frameworks */ = {isa = PBXBuildFile; productRef = 3670D11E2DC39180009B8C83 /* LemonSqueezy */; };
+		3670D1252DC3A36E009B8C83 /* CreateCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3670D1242DC3A36E009B8C83 /* CreateCustomer.swift */; };
+		3670D1272DC3A716009B8C83 /* UpdateCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3670D1262DC3A716009B8C83 /* UpdateCustomer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,6 +162,8 @@
 		21DB140D2AD1DE9A00B89E95 /* Webhooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webhooks.swift; sourceTree = "<group>"; };
 		21DB140F2AD1DEA200B89E95 /* GetWebhook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWebhook.swift; sourceTree = "<group>"; };
 		21DB14112AD1DEA900B89E95 /* GetWebhooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWebhooks.swift; sourceTree = "<group>"; };
+		3670D1242DC3A36E009B8C83 /* CreateCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCustomer.swift; sourceTree = "<group>"; };
+		3670D1262DC3A716009B8C83 /* UpdateCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCustomer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +171,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3670D11F2DC39180009B8C83 /* LemonSqueezy in Frameworks */,
 				2128D387295018A8005B16C2 /* LemonSqueezy in Frameworks */,
+				3670D11D2DC3915D009B8C83 /* LemonSqueezy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +196,8 @@
 				211C2C6529D223CA00195C57 /* Customers.swift */,
 				211C2C6729D2243B00195C57 /* GetCustomer.swift */,
 				211C2C6929D224DC00195C57 /* GetCustomers.swift */,
+				3670D1242DC3A36E009B8C83 /* CreateCustomer.swift */,
+				3670D1262DC3A716009B8C83 /* UpdateCustomer.swift */,
 			);
 			path = Customers;
 			sourceTree = "<group>";
@@ -472,6 +482,8 @@
 			name = "Lemon Squeezy";
 			packageProductDependencies = (
 				2128D386295018A8005B16C2 /* LemonSqueezy */,
+				3670D11C2DC3915D009B8C83 /* LemonSqueezy */,
+				3670D11E2DC39180009B8C83 /* LemonSqueezy */,
 			);
 			productName = "Lemon Squeezy";
 			productReference = 2128D37329501885005B16C2 /* Lemon Squeezy.app */;
@@ -501,6 +513,9 @@
 				Base,
 			);
 			mainGroup = 2128D36A29501885005B16C2;
+			packageReferences = (
+				3670D11B2DC3915D009B8C83 /* XCLocalSwiftPackageReference "../lemonsqueezy-swift" */,
+			);
 			productRefGroup = 2128D37429501885005B16C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -589,6 +604,7 @@
 				2133BFA2296DE7F800AD073F /* GetStores.swift in Sources */,
 				21DB14072AD1D60600B89E95 /* UsageRecords.swift in Sources */,
 				2146B0E3296EAC84004FC237 /* GetDiscount.swift in Sources */,
+				3670D1252DC3A36E009B8C83 /* CreateCustomer.swift in Sources */,
 				214D7A69296EB6CD007B72D2 /* LicenseKeyInstances.swift in Sources */,
 				214D7A62296EB1A9007B72D2 /* LicenseKeys.swift in Sources */,
 				211C2C6829D2243B00195C57 /* GetCustomer.swift in Sources */,
@@ -615,6 +631,7 @@
 				21DB13F72AD193CE00B89E95 /* GetSubscriptionItem.swift in Sources */,
 				21DB140E2AD1DE9A00B89E95 /* Webhooks.swift in Sources */,
 				21DB13F92AD193D500B89E95 /* GetSubscriptionItems.swift in Sources */,
+				3670D1272DC3A716009B8C83 /* UpdateCustomer.swift in Sources */,
 				21DB13F52AD1939500B89E95 /* SubscriptionItems.swift in Sources */,
 				214D7A66296EB1B6007B72D2 /* GetLicenseKeys.swift in Sources */,
 				2128D37729501885005B16C2 /* Lemon_SqueezyApp.swift in Sources */,
@@ -749,6 +766,7 @@
 				DEVELOPMENT_TEAM = XVBJCDZG3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Lemon-Squeezy-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -778,6 +796,7 @@
 				DEVELOPMENT_TEAM = XVBJCDZG3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Lemon-Squeezy-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -819,8 +838,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		3670D11B2DC3915D009B8C83 /* XCLocalSwiftPackageReference "../lemonsqueezy-swift" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../lemonsqueezy-swift";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		2128D386295018A8005B16C2 /* LemonSqueezy */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LemonSqueezy;
+		};
+		3670D11C2DC3915D009B8C83 /* LemonSqueezy */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LemonSqueezy;
+		};
+		3670D11E2DC39180009B8C83 /* LemonSqueezy */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LemonSqueezy;
 		};

@@ -13,6 +13,8 @@ struct Customers: View {
             Section("Get customers") {
                 NavigationLink(destination: GetCustomers()) { MethodRow(label: "`getCustomers()`", method: .GET) }
                 NavigationLink(destination: GetCustomer()) { MethodRow(label: "`getCustomer(_ customerId)`", method: .GET) }
+                NavigationLink(destination: CreateCustomer()) { MethodRow(label: "`createCustomer(body)`", method: .POST) }
+                NavigationLink(destination: UpdateCustomer()) { MethodRow(label: "`updateCustomer(_ customerId)`", method: .PATCH) }
             }
         }
         .navigationTitle("Customers")

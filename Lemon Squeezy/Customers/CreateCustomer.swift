@@ -1,16 +1,16 @@
 //
-//  CreateCheckout.swift
+//  CreateCustomer.swift
 //  Lemon Squeezy
 //
-//  Created by Ram Ratan Maurya on 11/01/23.
+//  Created by Ram Maurya on 01/05/25.
 //
 
 import SwiftUI
 import LemonSqueezy
 
-struct CreateCheckout: View {
+struct CreateCustomer: View {
     @EnvironmentObject var lemon: LemonSqueezy
-    @State var checkout: Checkout?
+    @State var customer: Customer?
     @State var errors: [LemonSqueezyAPIError] = []
     
     var body: some View {
@@ -21,29 +21,28 @@ struct CreateCheckout: View {
                         do {
                             let body = [
                                 "data": [
-                                    "type": "checkouts",
+                                    "type": "customers",
                                     "attributes": [
-                                        "custom_price": 2000
+                                        "name": "John Doe",
+                                        "email": "johndoe2@example.com",
+                                        "city": "New York",
+                                        "region": "NY",
+                                        "country": "US"
                                     ],
                                     "relationships": [
                                         "store": [
                                             "data": [
                                                 "type": "stores",
-                                                "id": "1"
-                                            ]
-                                        ],
-                                        "variant": [
-                                            "data": [
-                                                "type": "variants",
-                                                "id": "1"
+                                                "id": "2"
                                             ]
                                         ]
                                     ],
                                 ]
                             ]
-                            let result = try await lemon.createCheckout(body: body)
+                            let result = try await lemon.createCustomer(body: body)
+                            print(result.data)
                             withAnimation {
-                                checkout = result.data
+                                customer = result.data
                                 errors = result.errors ?? []
                             }
                             print(result)
@@ -56,14 +55,15 @@ struct CreateCheckout: View {
                         }
                     }
                 } label: {
-                    Text("Create Checkout")
+                    Text("Create Customer")
                 }
             }
             
-            if let checkout {
-                Section("Checkout") {
-                    LabeledContent("Store ID", value: String(checkout.attributes.storeId))
-                    LabeledContent("Variant ID", value: String(checkout.attributes.variantId))
+            if let customer {
+                Section("Customer") {
+                    LabeledContent("Name", value: String(customer.attributes.name))
+                    LabeledContent("Email", value: String(customer.attributes.email))
+                    LabeledContent("Status", value: String(customer.attributes.status))
                 }
             }
             
@@ -74,13 +74,12 @@ struct CreateCheckout: View {
                 }
               }
             }
+            
         }
-        .navigationTitle("Create Checkout")
+        .navigationTitle("Create Customer")
     }
 }
 
-struct CreateCheckout_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateCheckout()
-    }
+#Preview {
+    CreateCustomer()
 }

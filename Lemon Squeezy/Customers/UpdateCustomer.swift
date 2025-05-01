@@ -1,19 +1,18 @@
 //
-//  GetCustomer.swift
+//  UpdateCustomer.swift
 //  Lemon Squeezy
 //
-//  Created by Ram Ratan Maurya on 28/03/23.
+//  Created by Ram Maurya on 01/05/25.
 //
 
 import SwiftUI
 import LemonSqueezy
 
-struct GetCustomer: View {
+struct UpdateCustomer: View {
     @EnvironmentObject var lemon: LemonSqueezy
     @State var customer: Customer?
     @State var errors: [LemonSqueezyAPIError] = []
-    @State var customerId = ""
-    
+    @SceneStorage("customerId") var customerId = ""
     
     var body: some View {
         Form {
@@ -24,7 +23,16 @@ struct GetCustomer: View {
                 Button {
                     Task {
                         do {
-                            let result = try await lemon.getCustomer(customerId)
+                            let body = [
+                                "data": [
+                                    "type": "customers",
+                                    "id": customerId,
+                                    "attributes": [
+                                        "name": "(Updated via API)"
+                                    ]
+                                ]
+                            ]
+                            let result = try await lemon.updateCustomer(customerId, body: body)
                             withAnimation {
                                 customer = result.data
                                 errors = result.errors ?? []
@@ -39,28 +47,34 @@ struct GetCustomer: View {
                         }
                     }
                 } label: {
-                    Text("Get Customer")
+                    Text("Update Customer")
                 }
                 .disabled(customerId.isEmpty)
+            } footer: {
+                Text("Changes name to: (Updated via API)")
             }
             
             if let customer {
                 Section("Customer") {
                     LabeledContent("Name", value: customer.attributes.name)
                     LabeledContent("Email", value: customer.attributes.email)
-                    LabeledContent("Status", value: customer.attributes.statusFormatted)
-                    LabeledContent("Total Revenue", value: customer.attributes.totalRevenueCurrencyFormatted)
-                    LabeledContent("MRR", value: customer.attributes.mrrFormatted)
-                    LabeledContent("Customer Portal", value: customer.attributes.urls.customerPortal ?? "N/A")
+                    LabeledContent("Status", value: customer.attributes.status)
+                    LabeledContent("Updated at", value: customer.attributes.updatedAt)
                 }
             }
+            
+            if !errors.isEmpty {
+              Section("Errors") {
+                ForEach(errors, id: \.self) { error in
+                    Text(String(describing: error.localizedDescription))
+                }
+              }
+            }
         }
-        .navigationTitle("Get Customer")
+        .navigationTitle("Update Customer")
     }
 }
 
-struct GetCustomer_Previews: PreviewProvider {
-    static var previews: some View {
-        GetCustomer()
-    }
+#Preview {
+    UpdateCustomer()
 }

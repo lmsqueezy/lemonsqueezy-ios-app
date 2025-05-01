@@ -47,6 +47,14 @@ struct GetMe: View {
                 LabeledContent("createdAt", value: user.attributes.createdAt)
                 LabeledContent("updatedAt", value: user.attributes.updatedAt)
             }
+            
+            if !errors.isEmpty {
+              Section("Errors") {
+                ForEach(errors, id: \.self) { error in
+                    Text(String(describing: error.localizedDescription))
+                }
+              }
+            }
         }
         .navigationTitle("Get currently authenticated user")
     }

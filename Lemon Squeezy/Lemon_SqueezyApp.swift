@@ -10,7 +10,7 @@ import LemonSqueezy
 
 @main
 struct Lemon_SqueezyApp: App {
-    @StateObject var lemon = LemonSqueezy(LS_API_KEY)
+    @StateObject var lemon = LemonSqueezy.init(LS_API_KEY, "api.lemonsqueezy.test")
     
     var body: some Scene {
         WindowGroup {

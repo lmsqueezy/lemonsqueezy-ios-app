@@ -48,7 +48,6 @@ struct GetPrice: View {
                     LabeledContent("Variant ID", value: String(price.attributes.variantId))
                     LabeledContent("Category", value: price.attributes.category)
                     LabeledContent("Scheme", value: price.attributes.scheme)
-                    LabeledContent("Unit price", value: String(price.attributes.unitPrice))
                     LabeledContent("Package size", value: String(price.attributes.packageSize))
                     LabeledContent("Tax code", value: price.attributes.taxCode)
                 }

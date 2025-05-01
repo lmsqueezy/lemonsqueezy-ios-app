@@ -15,7 +15,7 @@ struct ContentView: View {
                   Text("This simple SwiftUI app showcases the various capabilities of the Lemon Squeezy library. Navigate into each category to explore the library methods.")
                 }
 
-                Section("Examples") {
+                Section("Resources") {
                     Group {
                         NavigationLink(destination: Users()) { Label("Users", systemImage: "person") }
                         NavigationLink(destination: Customers()) { Label("Customers", systemImage: "person.2") }
@@ -23,10 +23,10 @@ struct ContentView: View {
                         NavigationLink(destination: OrderItems()) { Label("Order Items", systemImage: "cart.badge.plus") }
                         NavigationLink(destination: Stores()) { Label("Store", systemImage: "building.2") }
                         NavigationLink(destination: Products()) { Label("Products", systemImage: "archivebox") }
-                        NavigationLink(destination: Variants()) { Label("Variants", systemImage: "shippingbox") }
-                        NavigationLink(destination: Files()) { Label("Files", systemImage: "doc.text.image.fill") }
+                        NavigationLink(destination: Variants()) { Label("Variants", systemImage: "shippingbox") }   
                     }
                     Group {
+                        NavigationLink(destination: Files()) { Label("Files", systemImage: "doc.text.image.fill") }
                         NavigationLink(destination: Subscriptions()) { Label("Subscriptions", systemImage: "chart.bar.xaxis") }
                         NavigationLink(destination: SubscriptionInvoices()) { Label("Subscription Invoices", systemImage: "chart.bar.xaxis.ascending.badge.clock") }
                         NavigationLink(destination: SubscriptionItems()) { Label("Subscription Items", systemImage: "chart.bar.doc.horizontal") }
