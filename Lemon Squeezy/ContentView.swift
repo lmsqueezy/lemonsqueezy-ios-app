@@ -23,7 +23,8 @@ struct ContentView: View {
                         NavigationLink(destination: OrderItems()) { Label("Order Items", systemImage: "cart.badge.plus") }
                         NavigationLink(destination: Stores()) { Label("Store", systemImage: "building.2") }
                         NavigationLink(destination: Products()) { Label("Products", systemImage: "archivebox") }
-                        NavigationLink(destination: Variants()) { Label("Variants", systemImage: "shippingbox") }   
+                        NavigationLink(destination: Variants()) { Label("Variants", systemImage: "shippingbox") }
+                        NavigationLink(destination: Affiliates()) { Label("Affiliates", systemImage: "person.3") }
                     }
                     Group {
                         NavigationLink(destination: Files()) { Label("Files", systemImage: "doc.text.image.fill") }

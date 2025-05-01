@@ -84,6 +84,9 @@
 		3670D11F2DC39180009B8C83 /* LemonSqueezy in Frameworks */ = {isa = PBXBuildFile; productRef = 3670D11E2DC39180009B8C83 /* LemonSqueezy */; };
 		3670D1252DC3A36E009B8C83 /* CreateCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3670D1242DC3A36E009B8C83 /* CreateCustomer.swift */; };
 		3670D1272DC3A716009B8C83 /* UpdateCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3670D1262DC3A716009B8C83 /* UpdateCustomer.swift */; };
+		36F3E1922DC3D76700FDE846 /* Affiliates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3E1912DC3D76700FDE846 /* Affiliates.swift */; };
+		36F3E1942DC3D7BE00FDE846 /* GetAffiliate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3E1932DC3D7BE00FDE846 /* GetAffiliate.swift */; };
+		36F3E1962DC3D85600FDE846 /* GetAffiliates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3E1952DC3D85600FDE846 /* GetAffiliates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +167,9 @@
 		21DB14112AD1DEA900B89E95 /* GetWebhooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWebhooks.swift; sourceTree = "<group>"; };
 		3670D1242DC3A36E009B8C83 /* CreateCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCustomer.swift; sourceTree = "<group>"; };
 		3670D1262DC3A716009B8C83 /* UpdateCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCustomer.swift; sourceTree = "<group>"; };
+		36F3E1912DC3D76700FDE846 /* Affiliates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affiliates.swift; sourceTree = "<group>"; };
+		36F3E1932DC3D7BE00FDE846 /* GetAffiliate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAffiliate.swift; sourceTree = "<group>"; };
+		36F3E1952DC3D85600FDE846 /* GetAffiliates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAffiliates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +252,9 @@
 				214D7A6E296EBD6A007B72D2 /* Checkout */,
 				2128D39129502FB0005B16C2 /* Helper Views */,
 				2128D37629501885005B16C2 /* Lemon_SqueezyApp.swift */,
+				36F3E1912DC3D76700FDE846 /* Affiliates.swift */,
+				36F3E1932DC3D7BE00FDE846 /* GetAffiliate.swift */,
+				36F3E1952DC3D85600FDE846 /* GetAffiliates.swift */,
 				2128D38C2950298A005B16C2 /* Secrets.swift */,
 				2128D37829501885005B16C2 /* ContentView.swift */,
 				2128D37A29501886005B16C2 /* Assets.xcassets */,
@@ -576,6 +585,7 @@
 				21DB140B2AD1D63700B89E95 /* GetUsageRecords.swift in Sources */,
 				211C2C6329D21C3B00195C57 /* GetDiscountRedemptions.swift in Sources */,
 				2133BFBC296E073400AD073F /* GetOrderItems.swift in Sources */,
+				36F3E1922DC3D76700FDE846 /* Affiliates.swift in Sources */,
 				214D7A74296EBD8A007B72D2 /* GetCheckouts.swift in Sources */,
 				214D7A6D296EB6D9007B72D2 /* GetLicenseKeyInstances.swift in Sources */,
 				21DB14092AD1D63100B89E95 /* GetUsageRecord.swift in Sources */,
@@ -626,6 +636,7 @@
 				21DB13EC2AD16BC800B89E95 /* SubscriptionInvoices.swift in Sources */,
 				211C2C6629D223CA00195C57 /* Customers.swift in Sources */,
 				2128D39D29504AAF005B16C2 /* Orders.swift in Sources */,
+				36F3E1962DC3D85600FDE846 /* GetAffiliates.swift in Sources */,
 				214D7A6B296EB6D4007B72D2 /* GetLicenseKeyInstance.swift in Sources */,
 				21DB13F22AD1924300B89E95 /* GetSubscriptionInvoices.swift in Sources */,
 				21DB13F72AD193CE00B89E95 /* GetSubscriptionItem.swift in Sources */,
@@ -634,6 +645,7 @@
 				3670D1272DC3A716009B8C83 /* UpdateCustomer.swift in Sources */,
 				21DB13F52AD1939500B89E95 /* SubscriptionItems.swift in Sources */,
 				214D7A66296EB1B6007B72D2 /* GetLicenseKeys.swift in Sources */,
+				36F3E1942DC3D7BE00FDE846 /* GetAffiliate.swift in Sources */,
 				2128D37729501885005B16C2 /* Lemon_SqueezyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
